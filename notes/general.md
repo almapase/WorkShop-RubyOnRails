@@ -24,7 +24,7 @@ ejercicio de gitHub
 generadores
 
     ~ rails g scaffold person name:string age:integer
-    # nos permite crear un recurso
+    # nos permite crear un recurso con todo incluido, hasta el REST FU
 
     ~ rake routes
     # nos muestra tosdas las rutas del proyecto
