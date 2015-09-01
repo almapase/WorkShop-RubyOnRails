@@ -17,3 +17,16 @@ Aplicación
 ejercicio de gitHub
 
     https://try.github.io/levels/1/challenges/1
+
+###Ruby on Rails (RoR)
+#### RVM --> Ruby Version Manager
+
+generadores
+
+    ~ rails g scaffold person name:string age:integer
+    # nos permite crear un recurso
+
+    ~ rake routes
+    # nos muestra tosdas las rutas del proyecto
+
+    ~ rake db:migrate
