@@ -30,3 +30,5 @@ generadores
     # nos muestra tosdas las rutas del proyecto
 
     ~ rake db:migrate
+### debuber
+se puede usar tanto en vista como controlador, esto levanta una consola donde podemos hacer pruebas
