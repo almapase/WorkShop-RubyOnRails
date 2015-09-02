@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'contents/index'
+  get 'contents/index' => 'contents#index'
 
   get 'contents/update'
 
