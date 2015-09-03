@@ -32,3 +32,15 @@ generadores
     ~ rake db:migrate
 ### debuber
 se puede usar tanto en vista como controlador, esto levanta una consola donde podemos hacer pruebas
+
+### generadores de vitas
+
+  + yaml
+  + [slim](http://slim-lang.com/) el que se usa hoy
+
+### gema Bootrap para rails
+
+    https://github.com/twbs/bootstrap-sass
+
+### para trabajar con bootstrap-sass
+le cambiamos la extencion al archivo application.css por .scss
