@@ -64,3 +64,13 @@ agregar al resouce
       get :done, "tasks#done"
     end
   end
+### levantar servidor en produccion
+
+    ~ rails s -e producction
+
+### precompilar, para ver los archivos
+      ~ rake assets:precompile
+
+### creamos el controlador para groups
+
+    ~ rails g controller groups index new create destroy edit update show
