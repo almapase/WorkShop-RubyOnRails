@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'contents/index'
+  root 'contents#index'
+
+  # verbo "path", "controlador#metodo"
+  # get "/index", "contents#index"
+
+  # match "/index/:id", "contents#index"
+
+  # resource :products
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

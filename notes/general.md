@@ -44,3 +44,23 @@ se puede usar tanto en vista como controlador, esto levanta una consola donde po
 
 ### para trabajar con bootstrap-sass
 le cambiamos la extencion al archivo application.css por .scss
+
+### tipos de rutas
+
++ verbo "path", "controlador#metodo"
++ get "/index", "contents#index"
++ match "/index/:id", "contents#index"
++ resource :products
+    +get ...
++ resouce :products do
+    resouce :tasks
+  end
+rutas especiales
++ put "tasks/:id/done"
++ put "tasks/:id/undone"  
+agregar al resouce
++ resource :products do
+    members do
+      get :done, "tasks#done"
+    end
+  end
