@@ -1,2 +1,6 @@
-h1 Groups#index
-p Find me in app/views/groups/index.html.slim
+h1 = t 'groups.index.title', {cantidad: @groups.count}
+- if @groups.empty?
+  h4 = t 'groups.index.no_groups'
+- else
+  = render @groups
+  

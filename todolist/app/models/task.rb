@@ -1,4 +1,5 @@
 class Task < ActiveRecord::Base
+  # belongs_to :group --> indica la realación con el modelo group
   belongs_to :group
   #where
   scope :all_done, -> {where(done: true)}
@@ -18,5 +19,6 @@ class Task < ActiveRecord::Base
 
   def set_done!
     self.done = true
+    self.save
   end
 end

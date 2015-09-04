@@ -38,9 +38,10 @@ se puede usar tanto en vista como controlador, esto levanta una consola donde po
   + yaml
   + [slim](http://slim-lang.com/) el que se usa hoy
 
-### gema Bootrap para rails
+##Trabajar con **Bootstrap**
+### gema bootstrap para rails
 
-    https://github.com/twbs/bootstrap-sass
+    [Gema Bootstrap](https://github.com/twbs/bootstrap-sass)
 
 ### para trabajar con bootstrap-sass
 le cambiamos la extencion al archivo application.css por .scss
@@ -64,13 +65,41 @@ agregar al resouce
       get :done, "tasks#done"
     end
   end
-### levantar servidor en produccion
+### levantar servidor en producción
 
     ~ rails s -e producction
 
-### precompilar, para ver los archivos
+### precompilar, genera los archivos que se veran en producción
+
       ~ rake assets:precompile
 
 ### creamos el controlador para groups
 
     ~ rails g controller groups index new create destroy edit update show
+
+### ERROR **resouce :groups** no genera la ruta a index
+la instrucción **resouce :group** genera las siguientes rutas
+[Mas información en click aquí](http://api.rubyonrails.org/classes/ActionDispatch/Routing/Mapper/Resources.html)
+
+´´´´´´´´
+groups      POST   /groups(.:format)      groups#create
+new_groups  GET    /groups/new(.:format)  groups#new
+edit_groups GET    /groups/edit(.:format) groups#edit
+            GET    /groups(.:format)      groups#show
+            PATCH  /groups(.:format)      groups#update
+            PUT    /groups(.:format)      groups#update
+            DELETE /groups(.:format)      groups#destroy
+´´´´´´´´´
+
+la instrucción **resouces :group** genera las siguientes rutas
+
+´´´´´´´´
+groups     GET    /groups(.:format)          groups#index
+           POST   /groups(.:format)          groups#create
+new_group  GET    /groups/new(.:format)      groups#new
+edit_group GET    /groups/:id/edit(.:format) groups#edit
+ group     GET    /groups/:id(.:format)      groups#show
+           PATCH  /groups/:id(.:format)      groups#update
+           PUT    /groups/:id(.:format)      groups#update
+           DELETE /groups/:id(.:format)      groups#destroy
+´´´´´´´´´

@@ -1,27 +1,9 @@
 Rails.application.routes.draw do
-
-  get 'groups/index'
-
-  get 'groups/new'
-
-  get 'groups/create'
-
-  get 'groups/destroy'
-
-  get 'groups/edit'
-
-  get 'groups/update'
-
-  get 'groups/show'
-
   root 'contents#index'
 
-  # verbo "path", "controlador#metodo"
-  # get "/index", "contents#index"
-
-  # match "/index/:id", "contents#index"
-
-  # resource :products
+  # Routes for the model Group
+  resources :groups
+  #get "/groups" => "groups#index"
 
 end
   # The priority is based upon order of creation: first created -> highest priority.
