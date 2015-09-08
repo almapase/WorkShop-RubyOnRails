@@ -1,24 +1,16 @@
 class Task < ActiveRecord::Base
-  # belongs_to :group --> indica la realación con el modelo group
   belongs_to :group
-  #where
-  scope :all_done, -> {where(done: true)}
+  belongs_to :user
 
-  after_save :send_mail
+  validates :group, presence: true
+  validates :title, presence: true
+  validates :user, presence: true
 
-  #consultar datos de la tabla relacionada
-  delegate :name, to: :group, prefix: true, allow_nil: true
+  after_create :send_mail
 
-  def send_mail
-    puts "envio mail"
-  end
+  private
+    def send_mail
+      Notification.task(self.user, self)
+    end
 
-  def set_done
-    self.done = true
-  end
-
-  def set_done!
-    self.done = true
-    self.save
-  end
 end

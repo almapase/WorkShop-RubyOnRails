@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :tasks
   root 'contents#index'
 
   # Routes for the model Group

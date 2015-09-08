@@ -2,5 +2,5 @@ h1 = t 'groups.index.title', {cantidad: @groups.count}
 - if @groups.empty?
   h4 = t 'groups.index.no_groups'
 - else
-  = render @groups
-  
+  div.group
+    = render @groups
